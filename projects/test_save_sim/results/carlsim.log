@@ -1,0 +1,408 @@
+[INFO carlsim/kernel/src/snn_manager.cpp:2020] *********************************************************************************
+[INFO carlsim/kernel/src/snn_manager.cpp:2022] ********************      Welcome to CARLsim 4.0      ***************************
+[INFO carlsim/kernel/src/snn_manager.cpp:2023] *********************************************************************************
+
+[INFO carlsim/kernel/src/snn_manager.cpp:2025] ***************************** Configuring Network ********************************
+[INFO carlsim/kernel/src/snn_manager.cpp:2027] Starting CARLsim simulation "save_sim" in USER mode
+[INFO carlsim/kernel/src/snn_manager.cpp:2028] Random number seed: 42
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2034] Current local time and date: Sat May  2 16:16:19 2020
+
+[DEBUG carlsim/kernel/src/snn_manager.cpp:165] CONNECT SETUP: connId=0, mulFast=1.000000, mulSlow=1.000000
+[INFO carlsim/kernel/src/snn_manager.cpp:448] Running COBA mode:
+[INFO carlsim/kernel/src/snn_manager.cpp:449]   - AMPA decay time            =     5 ms
+[INFO carlsim/kernel/src/snn_manager.cpp:450]   - NMDA rise time (disabled)  =     0 ms
+[INFO carlsim/kernel/src/snn_manager.cpp:451]   - GABAa decay time           =     6 ms
+[INFO carlsim/kernel/src/snn_manager.cpp:452]   - GABAb rise time (disabled) =     0 ms
+[INFO carlsim/kernel/src/snn_manager.cpp:453]   - GABAb decay time           =   150 ms
+[DEBUG carlsim/kernel/src/snn_manager.cpp:3473] Beginning compilation of the network....
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2863] Allocation for 1(output), St=0, End=8
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2863] Allocation for 0(input), St=9, End=125
+[INFO carlsim/kernel/src/snn_manager.cpp:3494] 
+
+[INFO carlsim/kernel/src/snn_manager.cpp:3495] ************************** Global Network Configuration *******************************
+[INFO carlsim/kernel/src/snn_manager.cpp:3496] The number of neurons in the network (numN) = 126
+[INFO carlsim/kernel/src/snn_manager.cpp:3497] The number of regular neurons in the network (numNReg:numNExcReg:numNInhReg) = 9:9:0
+[INFO carlsim/kernel/src/snn_manager.cpp:3498] The number of poisson neurons in the network (numNPois:numNExcPois:numInhPois) = 117:117:0
+[INFO carlsim/kernel/src/snn_manager.cpp:3499] The maximum axonal delay in the network (maxDelay) = 1
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3513] CUDA devices Configuration:
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3514]   - Number of CUDA devices          =         1
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3517]   - CUDA device ID with max GFLOPs  =         0
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3521]   + Use CUDA device[0]              = GeForce GTX 780
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3522]   + CUDA Compute Capability (CC)    =       3.5
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2882] Allocation for group (output) [id:1, local id:0], St=0, End=8
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2882] Allocation for group (input) [id:0, local id:1], St=9, End=125
+[INFO carlsim/kernel/src/snn_manager.cpp:5169] 
++ Local Network (8)
+[INFO carlsim/kernel/src/snn_manager.cpp:5170] |-+ Group List:
+[INFO carlsim/kernel/src/print_snn_info.cpp:249]   |-+ Local Group input(G:0,L:1): 
+[INFO carlsim/kernel/src/print_snn_info.cpp:252]     |- Type                       =    EXCIT
+[INFO carlsim/kernel/src/print_snn_info.cpp:253]     |- Num of Neurons             =      117
+[INFO carlsim/kernel/src/print_snn_info.cpp:254]     |- Start Id                   = (G:9,L:9)
+[INFO carlsim/kernel/src/print_snn_info.cpp:255]     |- End Id                     = (G:125,L:125)
+[INFO carlsim/kernel/src/print_snn_info.cpp:256]     |- numPostSynapses            =     1021
+[INFO carlsim/kernel/src/print_snn_info.cpp:257]     |- numPreSynapses             =        0
+[INFO carlsim/kernel/src/print_snn_info.cpp:265]     |- Refractory period          =  0.00000
+[INFO carlsim/kernel/src/print_snn_info.cpp:249]   |-+ Local Group output(G:1,L:0): 
+[INFO carlsim/kernel/src/print_snn_info.cpp:252]     |- Type                       =    EXCIT
+[INFO carlsim/kernel/src/print_snn_info.cpp:253]     |- Num of Neurons             =        9
+[INFO carlsim/kernel/src/print_snn_info.cpp:254]     |- Start Id                   = (G:0,L:0)
+[INFO carlsim/kernel/src/print_snn_info.cpp:255]     |- End Id                     = (G:8,L:8)
+[INFO carlsim/kernel/src/print_snn_info.cpp:256]     |- numPostSynapses            =        0
+[INFO carlsim/kernel/src/print_snn_info.cpp:257]     |- numPreSynapses             =     1021
+[INFO carlsim/kernel/src/snn_manager.cpp:5176] |-+ Connection List:
+[INFO carlsim/kernel/src/print_snn_info.cpp:185]   |-+ Local Connection Id 0: input(0) => output(1)
+[INFO carlsim/kernel/src/print_snn_info.cpp:186]     |- Type                       =    FIXED
+[INFO carlsim/kernel/src/print_snn_info.cpp:187]     |- Min weight                 =  0.00000
+[INFO carlsim/kernel/src/print_snn_info.cpp:188]     |- Max weight                 =  0.05000
+[INFO carlsim/kernel/src/print_snn_info.cpp:189]     |- Initial weight             =  0.05000
+[INFO carlsim/kernel/src/print_snn_info.cpp:190]     |- Min delay                  =        1
+[INFO carlsim/kernel/src/print_snn_info.cpp:191]     |- Max delay                  =        1
+[INFO carlsim/kernel/src/print_snn_info.cpp:192]     |- Radius X                   =     3.00
+[INFO carlsim/kernel/src/print_snn_info.cpp:193]     |- Radius Y                   =     3.00
+[INFO carlsim/kernel/src/print_snn_info.cpp:194]     |- Radius Z                   =     1.00
+[INFO carlsim/kernel/src/print_snn_info.cpp:195]     |- Num of synapses            = 1021
+[INFO carlsim/kernel/src/print_snn_info.cpp:198]     |- Avg numPreSynapses         =   113.44
+[INFO carlsim/kernel/src/print_snn_info.cpp:199]     |- Avg numPostSynapses        =     8.73
+[INFO carlsim/kernel/src/snn_manager.cpp:5447] 
+[INFO carlsim/kernel/src/snn_manager.cpp:5451] *****************      Initializing CPU 0 Runtime      *************************
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1973] copyExternalCurrent: lGrpId=-1, ptrPos=0, length=9, allocate=y
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1415] Transfering group settings to CPU:
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1417] Settings for Group output:
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1419] 	Type: 6
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1420] 	NumN: 9
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1421] 	M: 0
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1422] 	PreM: 1021
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1423] 	spikeGenerator: 0
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1424] 	FixedInputWts: 1
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1425] 	MaxDelay: 1
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1426] 	WithSTDP: 0
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1443] 	WithSTP: 0
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1449] 	spikeGen: is not set 
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1417] Settings for Group input:
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1419] 	Type: 7
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1420] 	NumN: 117
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1421] 	M: 1021
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1422] 	PreM: 0
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1423] 	spikeGenerator: 1
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1424] 	FixedInputWts: 1
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1425] 	MaxDelay: 1
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1426] 	WithSTDP: 0
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1443] 	WithSTP: 0
+[DEBUG carlsim/kernel/src/snn_cpu_module.cpp:1449] 	spikeGen: is not set 
+[INFO carlsim/kernel/src/snn_manager.cpp:1214] SpikeMonitor set for group 0 (input)
+[INFO carlsim/kernel/src/snn_manager.cpp:1214] SpikeMonitor set for group 1 (output)
+[INFO carlsim/kernel/src/snn_manager.cpp:1165] ConnectionMonitor 0 set for Connection 0: 0(input) => 1(output)
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/snn_manager.cpp:807] 
+[INFO carlsim/kernel/src/snn_manager.cpp:808] ******************** Running the simulation on 0 GPU(s) and 1 CPU(s) ***************************
+[INFO carlsim/kernel/src/snn_manager.cpp:809] 
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=1.000s) SpikeMonitor for group input(0) has 3488 spikes in 1000ms (29.81 +/- 5.21 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=1.000s) SpikeMonitor for group output(1) has 1399 spikes in 1000ms (155.44 +/- 32.94 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=1.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 1000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=2.000s) SpikeMonitor for group input(0) has 3491 spikes in 1000ms (29.84 +/- 5.07 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=2.000s) SpikeMonitor for group output(1) has 1498 spikes in 1000ms (166.44 +/- 38.44 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=2.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 2000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=3.000s) SpikeMonitor for group input(0) has 3532 spikes in 1000ms (30.19 +/- 5.98 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=3.000s) SpikeMonitor for group output(1) has 1511 spikes in 1000ms (167.89 +/- 39.68 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=3.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 3000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=4.000s) SpikeMonitor for group input(0) has 3522 spikes in 1000ms (30.10 +/- 5.50 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=4.000s) SpikeMonitor for group output(1) has 1524 spikes in 1000ms (169.33 +/- 38.14 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=4.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 4000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=5.000s) SpikeMonitor for group input(0) has 3513 spikes in 1000ms (30.03 +/- 5.44 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=5.000s) SpikeMonitor for group output(1) has 1495 spikes in 1000ms (166.11 +/- 37.78 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=5.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 5000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=6.000s) SpikeMonitor for group input(0) has 3563 spikes in 1000ms (30.45 +/- 5.31 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=6.000s) SpikeMonitor for group output(1) has 1500 spikes in 1000ms (166.67 +/- 40.00 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=6.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 6000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=7.000s) SpikeMonitor for group input(0) has 3589 spikes in 1000ms (30.68 +/- 5.77 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=7.000s) SpikeMonitor for group output(1) has 1554 spikes in 1000ms (172.67 +/- 41.23 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=7.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 7000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=8.000s) SpikeMonitor for group input(0) has 3450 spikes in 1000ms (29.49 +/- 5.65 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=8.000s) SpikeMonitor for group output(1) has 1470 spikes in 1000ms (163.33 +/- 38.99 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=8.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 8000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=9.000s) SpikeMonitor for group input(0) has 3421 spikes in 1000ms (29.24 +/- 5.37 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=9.000s) SpikeMonitor for group output(1) has 1449 spikes in 1000ms (161.00 +/- 37.80 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=9.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 9000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[DEBUG carlsim/kernel/src/snn_manager.cpp:797] runNetwork: runDur=1000ms, printRunSummary=y
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=10.000s) SpikeMonitor for group input(0) has 3491 spikes in 1000ms (29.84 +/- 5.76 Hz)
+[INFO carlsim/kernel/src/print_snn_info.cpp:116] (t=10.000s) SpikeMonitor for group output(1) has 1465 spikes in 1000ms (162.78 +/- 35.60 Hz)
+[INFO carlsim/monitor/connection_monitor_core.cpp:361] (t=10.000s) ConnectionMonitor ID=0 0(input) => 1(output): [preId,postId] wt (+/-wtChange in 10000ms) show first 100
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  0] 0.0384   [  0,  1] 0.0200   [  0,  2] 0.0063   [  0,  3] 0.0211   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  4] 0.0110   [  0,  5] nan   [  0,  6] 0.0070   [  0,  7] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  0,  8] nan   [  1,  0] 0.0414   [  1,  1] 0.0244   [  1,  2] 0.0086   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  3] 0.0228   [  1,  4] 0.0134   [  1,  5] nan   [  1,  6] 0.0075   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  1,  7] nan   [  1,  8] nan   [  2,  0] 0.0436   [  2,  1] 0.0288   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  2] 0.0114   [  2,  3] 0.0240   [  2,  4] 0.0159   [  2,  5] 0.0063   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  2,  6] 0.0079   [  2,  7] 0.0052   [  2,  8] nan   [  3,  0] 0.0446   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  1] 0.0332   [  3,  2] 0.0148   [  3,  3] 0.0245   [  3,  4] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  3,  5] 0.0081   [  3,  6] 0.0081   [  3,  7] 0.0060   [  3,  8] nan   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  0] 0.0444   [  4,  1] 0.0372   [  4,  2] 0.0187   [  4,  3] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  4] 0.0205   [  4,  5] 0.0103   [  4,  6] 0.0081   [  4,  7] 0.0067   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  4,  8] nan   [  5,  0] 0.0430   [  5,  1] 0.0405   [  5,  2] 0.0229   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  3] 0.0237   [  5,  4] 0.0223   [  5,  5] 0.0126   [  5,  6] 0.0078   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  5,  7] 0.0074   [  5,  8] nan   [  6,  0] 0.0405   [  6,  1] 0.0430   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  2] 0.0273   [  6,  3] 0.0223   [  6,  4] 0.0237   [  6,  5] 0.0150   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  6,  6] 0.0074   [  6,  7] 0.0078   [  6,  8] nan   [  7,  0] 0.0372   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  1] 0.0444   [  7,  2] 0.0317   [  7,  3] 0.0205   [  7,  4] 0.0244   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  7,  5] 0.0175   [  7,  6] 0.0067   [  7,  7] 0.0081   [  7,  8] 0.0058   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  0] 0.0332   [  8,  1] 0.0446   [  8,  2] 0.0359   [  8,  3] 0.0183   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  4] 0.0245   [  8,  5] 0.0198   [  8,  6] 0.0060   [  8,  7] 0.0081   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  8,  8] 0.0065   [  9,  0] 0.0288   [  9,  1] 0.0436   [  9,  2] 0.0395   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  3] 0.0159   [  9,  4] 0.0240   [  9,  5] 0.0217   [  9,  6] 0.0052   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [  9,  7] 0.0079   [  9,  8] 0.0072   [ 10,  0] 0.0244   [ 10,  1] 0.0414   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  2] 0.0423   [ 10,  3] 0.0134   [ 10,  4] 0.0228   [ 10,  5] 0.0233   
+[INFO carlsim/monitor/connection_monitor_core.cpp:395] [ 10,  6] nan   [ 10,  7] 0.0075   [ 10,  8] 0.0077   [ 11,  0] 0.0200   
+[INFO carlsim/kernel/src/snn_manager.cpp:6548] 
+
+[INFO carlsim/kernel/src/snn_manager.cpp:6549] ********************    Simulation Summary      ***************************
+[INFO carlsim/kernel/src/snn_manager.cpp:6552] Network Parameters: 	numNeurons = 126 (numNExcReg:numNInhReg = 7.1:0.0)
+[INFO carlsim/kernel/src/snn_manager.cpp:6553] 			numSynapses = 1021
+[INFO carlsim/kernel/src/snn_manager.cpp:6554] 			maxDelay = 1
+[INFO carlsim/kernel/src/snn_manager.cpp:6555] Simulation Mode:	COBA
+[INFO carlsim/kernel/src/snn_manager.cpp:6556] Random Seed:		42
+[INFO carlsim/kernel/src/snn_manager.cpp:6557] Timing:			Model Simulation Time = 10 sec
+[INFO carlsim/kernel/src/snn_manager.cpp:6558] 			Actual Execution Time = 0.90 sec
+[INFO carlsim/kernel/src/snn_manager.cpp:6560] Average Firing Rate:	2+ms delay = 0.000 Hz
+[INFO carlsim/kernel/src/snn_manager.cpp:6562] 			1ms delay = 39.623 Hz
+[INFO carlsim/kernel/src/snn_manager.cpp:6563] 			Overall = 39.623 Hz
+[INFO carlsim/kernel/src/snn_manager.cpp:6564] Overall Spike Count Transferred:
+[INFO carlsim/kernel/src/snn_manager.cpp:6565] 			2+ms delay = 0
+[INFO carlsim/kernel/src/snn_manager.cpp:6566] 			1ms delay = 0
+[INFO carlsim/kernel/src/snn_manager.cpp:6567] Overall Spike Count:	2+ms delay = 0
+[INFO carlsim/kernel/src/snn_manager.cpp:6568] 			1ms delay = 49925
+[INFO carlsim/kernel/src/snn_manager.cpp:6569] 			Total = 49925
+[INFO carlsim/kernel/src/snn_manager.cpp:6570] *********************************************************************************
+

@@ -1,0 +1,46 @@
+[INFO carlsim/kernel/src/snn_manager.cpp:2020] *********************************************************************************
+[INFO carlsim/kernel/src/snn_manager.cpp:2022] ********************      Welcome to CARLsim 4.0      ***************************
+[INFO carlsim/kernel/src/snn_manager.cpp:2023] *********************************************************************************
+
+[INFO carlsim/kernel/src/snn_manager.cpp:2025] ***************************** Configuring Network ********************************
+[INFO carlsim/kernel/src/snn_manager.cpp:2027] Starting CARLsim simulation "load_sim" in USER mode
+[INFO carlsim/kernel/src/snn_manager.cpp:2028] Random number seed: 42
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2034] Current local time and date: Sat May  2 16:26:50 2020
+
+[DEBUG carlsim/kernel/src/snn_manager.cpp:165] CONNECT SETUP: connId=0, mulFast=1.000000, mulSlow=1.000000
+[DEBUG carlsim/kernel/src/snn_manager.cpp:3473] Beginning compilation of the network....
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2863] Allocation for 1(output), St=0, End=8
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2863] Allocation for 0(input), St=9, End=125
+[INFO carlsim/kernel/src/snn_manager.cpp:3494] 
+
+[INFO carlsim/kernel/src/snn_manager.cpp:3495] ************************** Global Network Configuration *******************************
+[INFO carlsim/kernel/src/snn_manager.cpp:3496] The number of neurons in the network (numN) = 126
+[INFO carlsim/kernel/src/snn_manager.cpp:3497] The number of regular neurons in the network (numNReg:numNExcReg:numNInhReg) = 9:9:0
+[INFO carlsim/kernel/src/snn_manager.cpp:3498] The number of poisson neurons in the network (numNPois:numNExcPois:numInhPois) = 117:117:0
+[INFO carlsim/kernel/src/snn_manager.cpp:3499] The maximum axonal delay in the network (maxDelay) = 1
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3513] CUDA devices Configuration:
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3514]   - Number of CUDA devices          =         1
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3517]   - CUDA device ID with max GFLOPs  =         0
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3521]   + Use CUDA device[0]              = GeForce GTX 780
+[INFO carlsim/kernel/src/gpu_module/snn_gpu_module.cu:3522]   + CUDA Compute Capability (CC)    =       3.5
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2882] Allocation for group (output) [id:1, local id:0], St=0, End=8
+[DEBUG carlsim/kernel/src/snn_manager.cpp:2882] Allocation for group (input) [id:0, local id:1], St=9, End=125
+[INFO carlsim/kernel/src/snn_manager.cpp:5169] 
++ Local Network (8)
+[INFO carlsim/kernel/src/snn_manager.cpp:5170] |-+ Group List:
+[INFO carlsim/kernel/src/print_snn_info.cpp:249]   |-+ Local Group input(G:0,L:1): 
+[INFO carlsim/kernel/src/print_snn_info.cpp:252]     |- Type                       =    EXCIT
+[INFO carlsim/kernel/src/print_snn_info.cpp:253]     |- Num of Neurons             =      117
+[INFO carlsim/kernel/src/print_snn_info.cpp:254]     |- Start Id                   = (G:9,L:9)
+[INFO carlsim/kernel/src/print_snn_info.cpp:255]     |- End Id                     = (G:125,L:125)
+[INFO carlsim/kernel/src/print_snn_info.cpp:256]     |- numPostSynapses            =     1021
+[INFO carlsim/kernel/src/print_snn_info.cpp:257]     |- numPreSynapses             =        0
+[INFO carlsim/kernel/src/print_snn_info.cpp:265]     |- Refractory period          =  0.00000
+[INFO carlsim/kernel/src/print_snn_info.cpp:249]   |-+ Local Group output(G:1,L:0): 
+[INFO carlsim/kernel/src/print_snn_info.cpp:252]     |- Type                       =    EXCIT
+[INFO carlsim/kernel/src/print_snn_info.cpp:253]     |- Num of Neurons             =        9
+[INFO carlsim/kernel/src/print_snn_info.cpp:254]     |- Start Id                   = (G:0,L:0)
+[INFO carlsim/kernel/src/print_snn_info.cpp:255]     |- End Id                     = (G:8,L:8)
+[INFO carlsim/kernel/src/print_snn_info.cpp:256]     |- numPostSynapses            =        0
+[INFO carlsim/kernel/src/print_snn_info.cpp:257]     |- numPreSynapses             =     1021
+[INFO c

@@ -882,6 +882,7 @@ public:
 	const FILE* getLogFpDeb() { return snn_->getLogFpDeb(); }
 	const FILE* getLogFpLog() { return snn_->getLogFpLog(); }
 
+
 	void saveSimulation(const std::string& fileName, bool saveSynapseInfo) {
 		FILE* fpSave = fopen(fileName.c_str(),"wb");
 		std::string funcName = "saveSimulation()";
@@ -1482,9 +1483,9 @@ public:
 
 		// try to open save file to make sure we have permission (so the user immediately knows about the error and 
 		// doesn't have to wait until their simulation run has ended)
-		FILE* fpTry = fopen(def_save_fileName_.c_str(),"wb");
-		UserErrors::assertTrue(fpTry!=NULL,UserErrors::FILE_CANNOT_OPEN,"Default save file",def_save_fileName_);
-		fclose(fpTry);
+		// FILE* fpTry = fopen(def_save_fileName_.c_str(),"wb");
+		// UserErrors::assertTrue(fpTry!=NULL,UserErrors::FILE_CANNOT_OPEN,"Default save file",def_save_fileName_);
+		// fclose(fpTry);
 	}
 
 	// wrapper function, set default values for E-STDP params
@@ -1605,7 +1606,7 @@ private:
 
 		// set default save sim params
 		// TODO: when we run executable from local dir, put save file in results/
-		setDefaultSaveOptions("results/sim_"+netName_+".dat",false);
+		setDefaultSaveOptions("results/sim_"+netName_+".dat",true);
 
 		connSyn_.clear();
 		connComp_.clear();
@@ -1930,7 +1931,6 @@ void CARLsim::setLogFile(const std::string& fileName) { _impl->setLogFile(fileNa
 void CARLsim::setLogsFpCustom(FILE* fpInf, FILE* fpErr, FILE* fpDeb, FILE* fpLog) {
 	_impl->setLogsFpCustom(fpInf, fpErr, fpDeb, fpLog);
 }
-
 
 // Adds a constant bias to the weight of every synapse in the connection
 void CARLsim::biasWeights(short int connId, float bias, bool updateWeightRange) {

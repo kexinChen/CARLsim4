@@ -1434,11 +1434,9 @@ void SNN::saveSimulation(FILE* fid, bool saveSynapseInfo) {
 
 	//// write network info
 	if (!fwrite(&glbNetworkConfig.numN,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	int dummyInt = 0;
 	//if (!fwrite(&numPreSynNet,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	if (!fwrite(&dummyInt,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
 	//if (!fwrite(&numPostSynNet,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	if (!fwrite(&dummyInt,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
+	if (!fwrite(&glbNetworkConfig.numSynNet,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
 	if (!fwrite(&numGroups,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
 	
 	//// write group info
@@ -1455,60 +1453,63 @@ void SNN::saveSimulation(FILE* fid, bool saveSynapseInfo) {
 		if (!fwrite(name,1,100,fid)) KERNEL_ERROR("saveSimulation fwrite error");
 	}
 
-	//// +++++ Fetch WEIGHT DATA (GPU Mode only) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
-	//if (simMode_ == GPU_MODE)
-	//	copyWeightState(&managerRuntimeData, &runtimeData[0], cudaMemcpyDeviceToHost, false);
-	//// +++++ WRITE SYNAPSE INFO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+	// +++++ Fetch WEIGHT DATA (GPU Mode only) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+	// if (preferredSimMode_ == GPU_MODE) {
+	// 	copyWeightState(&managerRuntimeData, &runtimeData[0], cudaMemcpyDeviceToHost, false);
+	// }
+
+	// +++++ WRITE SYNAPSE INFO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
 	//// \FIXME: replace with faster version
-	//if (saveSynapseInfo) {
-	//	for (int i = 0; i < numN; i++) {
-	//		unsigned int offset = managerRuntimeData.cumulativePost[i];
+	if (saveSynapseInfo) {
+		for (int i = 0; i < glbNetworkConfig.numN; i++) {
 
-	//		unsigned int count = 0;
-	//		for (int t=0;t<maxDelay_;t++) {
-	//			DelayInfo dPar = managerRuntimeData.postDelayInfo[i*(maxDelay_+1)+t];
+			unsigned int offset = managerRuntimeData.cumulativePost[i];
 
-	//			for(int idx_d=dPar.delay_index_start; idx_d<(dPar.delay_index_start+dPar.delay_length); idx_d++)
-	//				count++;
-	//		}
+			unsigned int count = 0;
+			for (int t=0;t<glbNetworkConfig.maxDelay;t++) {
+				DelayInfo dPar = managerRuntimeData.postDelayInfo[i*(glbNetworkConfig.maxDelay+1)+t];
 
-	//		if (!fwrite(&count,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
+				for(int idx_d=dPar.delay_index_start; idx_d<(dPar.delay_index_start+dPar.delay_length); idx_d++)
+					count++;
+			}
 
-	//		for (int t=0;t<maxDelay_;t++) {
-	//			DelayInfo dPar = managerRuntimeData.postDelayInfo[i*(maxDelay_+1)+t];
+			if (!fwrite(&count,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
 
-	//			for(int idx_d=dPar.delay_index_start; idx_d<(dPar.delay_index_start+dPar.delay_length); idx_d++) {
-	//				// get synaptic info...
-	//				SynInfo post_info = managerRuntimeData.postSynapticIds[offset + idx_d];
+			for (int t=0;t<glbNetworkConfig.maxDelay;t++) {
+				DelayInfo dPar = managerRuntimeData.postDelayInfo[i*(glbNetworkConfig.maxDelay+1)+t];
 
-	//				// get neuron id
-	//				//int p_i = (post_info&POST_SYN_NEURON_MASK);
-	//				unsigned int p_i = GET_CONN_NEURON_ID(post_info);
-	//				assert(p_i<numN);
+				for(int idx_d=dPar.delay_index_start; idx_d<(dPar.delay_index_start+dPar.delay_length); idx_d++) {
+					// get synaptic info...
+					SynInfo post_info = managerRuntimeData.postSynapticIds[offset + idx_d];
 
-	//				// get syn id
-	//				unsigned int s_i = GET_CONN_SYN_ID(post_info);
-	//				//>>POST_SYN_NEURON_BITS)&POST_SYN_CONN_MASK;
-	//				assert(s_i<(managerRuntimeData.Npre[p_i]));
+					// get neuron id
+					//int p_i = (post_info&POST_SYN_NEURON_MASK);
+					unsigned int p_i = GET_CONN_NEURON_ID(post_info);
+					assert(p_i<glbNetworkConfig.numN);
 
-	//				// get the cumulative position for quick access...
-	//				unsigned int pos_i = managerRuntimeData.cumulativePre[p_i] + s_i;
+					// get syn id
+					unsigned int s_i = GET_CONN_SYN_ID(post_info);
+					//>>POST_SYN_NEURON_BITS)&POST_SYN_CONN_MASK;
+					assert(s_i<(managerRuntimeData.Npre[p_i]));
 
-	//				uint8_t delay = t+1;
-	//				uint8_t plastic = s_i < managerRuntimeData.Npre_plastic[p_i]; // plastic or fixed.
+					// get the cumulative position for quick access...
+					unsigned int pos_i = managerRuntimeData.cumulativePre[p_i] + s_i;
 
-	//				if (!fwrite(&i,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	//				if (!fwrite(&p_i,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	//				if (!fwrite(&(managerRuntimeData.wt[pos_i]),sizeof(float),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	//				if (!fwrite(&(managerRuntimeData.maxSynWt[pos_i]),sizeof(float),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	//				if (!fwrite(&delay,sizeof(uint8_t),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	//				if (!fwrite(&plastic,sizeof(uint8_t),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	//				if (!fwrite(&(managerRuntimeData.connIdsPreIdx[pos_i]),sizeof(short int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
-	//			}
-	//		}
-	//	}
-	//}
+					uint8_t delay = t+1;
+					uint8_t plastic = s_i < managerRuntimeData.Npre_plastic[p_i]; // plastic or fixed.
+
+					if (!fwrite(&i,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
+					if (!fwrite(&p_i,sizeof(int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
+					if (!fwrite(&(managerRuntimeData.wt[pos_i]),sizeof(float),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
+					if (!fwrite(&(managerRuntimeData.maxSynWt[pos_i]),sizeof(float),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
+					if (!fwrite(&delay,sizeof(uint8_t),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
+					if (!fwrite(&plastic,sizeof(uint8_t),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
+					if (!fwrite(&(managerRuntimeData.connIdsPreIdx[pos_i]),sizeof(short int),1,fid)) KERNEL_ERROR("saveSimulation fwrite error");
+				}
+			}
+		}
+	}
 }
 
 // writes population weights from gIDpre to gIDpost to file fname in binary
